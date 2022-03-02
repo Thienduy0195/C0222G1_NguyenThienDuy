@@ -1,1 +1,1 @@
-# C0222G1_NguyenThienDuy_Module1
+Hello. My name's Thien Duy Nguyen and i'm 27 years old. I'm in the period of learning to be a developer, thank you for reading this sh*t 
