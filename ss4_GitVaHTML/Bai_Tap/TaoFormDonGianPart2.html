@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormPart2</title>
+    <style>
+       .dangky {
+           color: blue;
+           background-color: lightblue;
+       }
+        .table {
+            background-color: darkseagreen;
+        }
+        td {color: blue;
+
+        }
+    </style>
+</head>
+<body>
+<form action="TaoFormDonGianPart2.html" method="get">
+    <table class="table" border="1" width="300">
+        <tr class="dangky">
+            <th colspan="2" style="text-align: left"><p><strong>ĐĂNG KÝ HỌC VIÊN</strong></p></th>
+        </tr>
+        <tr>
+            <td>
+                <span>Họ và tên</span>
+            </td>
+            <td>
+                <input type="text" name="hovaten" size="25px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Ngày sinh</span>
+            </td>
+            <td>
+                <input type="text" name="ngaysinh" size="10px">
+            </td>
+        </tr>
+        <tr>
+            <td><span>Giới tính</span></td>
+            <td>
+                <input type="radio" name="gender">Nam
+                <input type="radio" name="gender">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Địa chỉ</span>
+            </td>
+            <td>
+                <input type="text" name="add">
+            </td>
+        </tr>
+        <tr>
+            <td><span>Lớp</span></td>
+            <td>
+                <select name="class" id="">
+                    <option value="chonlop"> - Chọn lớp - </option>
+                    <option value="c0222g1">Lớp C0222G1</option>
+                    <option value="c0222g2">Lớp C0222G2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Email</span>
+            </td>
+            <td>
+                <input type="text" name="email" size="12px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Điện thoại</span>
+            </td>
+            <td>
+                <input type="text" name="sodienthoai" size="12px">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center">
+                <input type="submit" name="sub" value="Đăng Ký">
+                <input type="submit" name="sub" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
