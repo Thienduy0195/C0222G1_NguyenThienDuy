@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaoFormDonGian</title>
+    <style>
+        table {color:deepskyblue;}
+        .boxform {
+            background: blanchedalmond;
+            display: inline-block;
+        }
+        .sothich {color: coral}
+        .abc {color: blue}
+    </style>
+</head>
+<body>
+<div class="boxform">
+    <table border="0">
+        <tr>
+            <style>
+                th { color: white}
+            </style>
+            <th colspan="2" style="color" bgcolor="#ff4500"><p>SỞ THÍCH CỦA BẠN</p></th>
+        </tr>
+        <tr class="abc">
+            <td><p><strong>Họ Và Tên</strong></p></td>
+            <td><input type="text" name="yourname" placeholder="yourname"></td>
+        </tr>
+        <tr class="abc">
+            <td style="text-align: right"><p><strong>Email</strong></p></td>
+            <td><input type="text" name="email" placeholder="email"></td>
+        </tr>
+        <tr class="abc">
+            <td style="text-align: right"><p><strong>Sở thích</strong></p></td>
+            <td class="sothich">
+                <input type="checkbox" id="thethao" name="hobby" value="thể thao">
+                <label for="thethao">Thể Thao</label>
+                <input type="checkbox" id="amnhac" name="hobby" value="âm nhạc">
+                <label for="amnhac">Âm nhạc</label>
+                <input type="checkbox" id="docsach" name="hobby" value="đọc sách">
+                <label for="docsach">Đọc sách</label> <br>
+                <input type="checkbox" id="luotweb" name="hobby" value="lướt web">
+                <label for="luotweb">Lướt web</label>
+                <input type="checkbox" id="choigame" name="hobby" value="chơi game">
+                <label for="choigame">Chơi Game</label>
+                <input type="checkbox" id="dienanh" name="hobby" value="điện ảnh">
+                <label for="dienanh">Điện Ảnh</label> <br>
+                <label for="dulich"><input type="checkbox" id="dulich" name="hobby" value="du lịch">
+                    <label for="dulich">Du lịch</label> <br>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="submit" value="Gửi Thông Tin">
+                <input type="reset" value="Nhập lại">
+            </th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
