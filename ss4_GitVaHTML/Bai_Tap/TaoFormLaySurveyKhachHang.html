@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormSurvey</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form action="https://gallery.wufoo.com/">
+    <table>
+        <p style="font-size: xx-large">
+            Market Research Survey
+        </p>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+<tr>
+    <td>
+        <p><strong>What is your age range?</strong></p>
+        <select name="age_option" id="age">
+            <option value="18-24">18-24</option>
+            <option value="25-30">25-30</option>
+            <option value="18-24">18-24</option>
+            <option value="25-30">25-30</option>
+        </select>
+    </td>
+</tr>
+        <tr>
+            <td>
+                <p><strong>What is your yearly income range?</strong></p>
+                <select name="yearly_income" id="income">
+                    <option value="0-25,000">$0 - $25,000</option>
+                    <option value="25-30">$25,001 - $50,000</option>
+                    <option value="0-25,000">$50,000 - $100,000</option>
+                    <option value="25-30">$100,000 + </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><Strong>Gender Identity</Strong></p>
+                <input type="radio" name="gender">Male <br>
+                <input type="radio" name="gender">Female <br>
+                <input type="radio" name="gender">Nonbinary <br>
+                <input type="radio" name="gender">Other
+                <input type="text" name="gender">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Which of the following products have your purchased in the last 2 months. Please check all that apply.</strong></p>
+                <input type="checkbox" name="product">Product 1 <br>
+                <input type="checkbox" name="product">Product 2 <br>
+                <input type="checkbox" name="product">Product 3 <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>How often would you use our new product?</strong></p>
+                <input type="radio" name="time">Daily <br>
+                <input type="radio" name="time">Weekly <br>
+                <input type="radio" name="time">Monthly <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>What would you pay for the new product?</strong></p>
+                <span>$</span>
+                <input type="text" name="money" size="10">
+                <span>.</span>
+                <input type="text" name="money" size="2">
+                <pre style="font-size: small">          Dollar      cent</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>What features would you like to see in the new product.</strong></p>
+                <textarea name="fearture" id="" cols="150" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <strong>Please rate your level of agreement with the following statements</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <table width="1130" style="background-color: darkgray">
+                <tr style="background-color: lightskyblue">
+                    <th></th>
+                    <th>Strongly Disagree</th>
+                    <th>Disagree</th>
+                    <th>Agree</th>
+                    <th>Strongly Agree</th>
+                </tr>
+               <div>
+                   <tr style="background-color: white">
+                       <td>
+                           <p>Our products are priced fairly</p>
+                       </td>
+                       <td style="text-align: center">
+                           <input type="radio" name="tick" value="1">1
+                       </td>
+                       <td style="text-align: center">
+                           <input type="radio" name="tick" value="2">2
+                       </td>
+                       <td style="text-align: center">
+                           <input type="radio" name="tick" value="3">3
+                       </td>
+                       <td style="text-align: center">
+                           <input type="radio" name="tick" value="4">4
+                       </td>
+                   </tr>
+               </div>
+                <div>
+                    <tr style="background-color: lightskyblue">
+                        <td>
+                            <p>Our products are high quality</p>
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="1">1
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="2">2
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="3">3
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="4">4
+                        </td>
+                    </tr>
+                </div>
+                <div>
+                    <tr style="background-color: white">
+                        <td>
+                            <p>You would recommend our product to a friend or coworker</p>
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="1">1
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="2">2
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="3">3
+                        </td>
+                        <td style="text-align: center">
+                            <input type="radio" name="tick" value="4">4
+                        </td>
+                    </tr>
+                </div>
+            </table>
+            <button style="height: 100;width: 200">Submit</button>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
