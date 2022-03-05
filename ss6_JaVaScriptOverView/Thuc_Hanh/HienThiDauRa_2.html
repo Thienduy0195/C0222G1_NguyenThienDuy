@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .abc {
+            color: greenyellow;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .centera {
+            text-align: center;
+        }
+        .centerb {
+            position: absolute;
+            top: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="abc" id="hello"></div>
+<div class="centera">
+    <button class="centerb" type="button" onclick="sayhello();">Click vào đây!</button>
+</div>
+<script>
+    function sayhello(){
+        document.getElementById('hello').innerHTML = 'an-nyeong-ha-se-yo!';
+    }
+</script>
+</body>
+</html>
