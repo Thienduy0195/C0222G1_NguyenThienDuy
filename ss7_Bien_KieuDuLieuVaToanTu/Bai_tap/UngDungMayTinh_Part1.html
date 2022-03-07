@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="border-collapse: collapse">
+    <tr>
+        <h2>Caculator</h2>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="firstno">
+        </td>
+        <td>
+            <input type="text" id="secondno">
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" onclick="abc('+')">Addition(+)</button>
+            <button type="button" onclick="abc('-')">Subtraction(-)</button>
+            <button type="button" onclick="abc('*')">Multiplication(*)</button>
+            <button type="button" onclick="abc('/')">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+
+        function abc(value) {
+            let a = parseInt(document.getElementById("firstno").value)
+            let b = parseInt(document.getElementById("secondno").value)
+            let ad = eval(a + value + b)
+            document.getElementById("result").innerHTML = "Kết quả là " + ad.toLocaleString();
+        }
+
+        // }
+
+</script>
+</body>
+</html>
