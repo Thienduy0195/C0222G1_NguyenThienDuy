@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<script>
+    let score1 = parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+    let score2 = parseFloat(prompt("Nhập điểm bài giữa kỳ: "));
+    let score3 = parseFloat(prompt("Nhập điểm bài cuối kỳ: "));
+    let result = (score1 + score2 * 2 + score3 * 3) / 6;
+    if (result > 8.5) {
+        alert("Học sinh này đạt điểm A")
+    } else if (result > 7) {
+        alert("Học sinh này đạt điểm B")
+    } else if (result > 5.5) {
+        alert("Học sinh này đạt điểm C")
+    } else if (result > 4) {
+        alert("Học sinh này đạt điểm D")
+    } else {
+        alert("Học sinh này thi trượt")
+    }
+</script>
+</body>
+</html>

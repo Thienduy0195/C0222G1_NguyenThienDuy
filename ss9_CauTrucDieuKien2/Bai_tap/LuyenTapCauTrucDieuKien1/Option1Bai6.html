@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let total = parseFloat(prompt("Nhập số sản phẩm bán được trong tháng: "))
+    // Quy Định 1. Bán được bằng hoặc hơn 10 sản phẩm/tháng = đạt 100 % KPI
+    //          2. bán được [total] sản phẩm/tháng (total<10) = đạt [total]/10*100% KPI
+    //          3. Mỗi sản phẩm bán được thì được [a] tiền hoa hồng (đơn vị tính triệu đồng)
+    let a = parseFloat(prompt("Tiền hoa hồng cho mỗi sản phẩm là (đơn vị tính: VND đồng): "))
+    let money1 = total * a
+    let money2 = total * a * total/10
+    if (total >= 10) {
+        document.write("Lương năng suất tháng này là: " + money1 + " VND")
+    } else {
+        document.write("Lương năng suất tháng này là: " + money2 + " VND")
+    }
+</script>
+</body>
+</html>

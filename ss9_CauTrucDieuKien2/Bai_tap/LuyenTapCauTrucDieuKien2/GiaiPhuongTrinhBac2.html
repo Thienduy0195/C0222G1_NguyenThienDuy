@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        // giải phương trình bậc 2 dạng a*X^2 + b*X + c = 0 (a#0)
+        let a = parseInt(prompt("Nhập vào tham số a: "))
+        let b = parseInt(prompt("Nhập vào tham số b: "))
+        let c = parseInt(prompt("Nhập vào tham số c: "))
+        let Del = b*b - 4 * a * c
+        let Del2 = Math.sqrt(Del);
+        let x = -b/2/a;
+        let x1 = (-b + Del2)/2/a;
+        let x2 = (-b - Del2)/2/a;
+        if(a===0){
+            document.write("Đây là phương trình bậc 1, không thỏa đề bài yêu cầu")
+        } else if(Del < 0) {
+            document.write("Nghiệm của phương trình là: " + x);
+        } else if(Del === 0) {
+            document.write("Phương trình có nghiệm kép là: " + x);
+        } else {
+            document.write("Nghiệm thứ nhất của phương trình là: " + x1 + "</br>")
+            document.write("Nghiệm thứ hai của phương trình là: " + x2)
+        }
+
+    </script>
+</body>
+</html>

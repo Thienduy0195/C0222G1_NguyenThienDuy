@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điện</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số điện đã dùng trong tháng: "))
+        let result1 = a * 1500
+        let result2 = 100 * 1500 + (a-100)*2200
+        let result3 = 100 * 1500 + 100 * 2200 + (a-200)*3000
+        // let last = parseInt(prompt("Nhập số điện cuối kỳ: "))
+        // let quo = last - first
+        // Nếu số điện dùng trong tháng dưới 100 Kw thì đơn giá điện = 1,500 / Kw
+        // Nếu số điện dùng trong tháng vượt quá 100 Kw thì đơn giá điện từ số 101 = 2,200 / Kw
+        // Nếu đơn giá điện trong tháng vượt quá 200 Kw thì đơn giá điện từ số 201 = 3,000 / Kw
+        if(a < 100){
+            document.write("số tiền điện tháng này là: " + result1 + "VND")
+        } else if(a < 200) {
+            document.write("số tiền điện tháng này là: " + result2 + "VND")
+        } else {
+            document.write("số tiền điện tháng này là: " + result3 + "VND")
+        }
+    </script>
+</body>
+</html>

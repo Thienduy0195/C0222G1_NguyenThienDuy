@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</title>
+</head>
+<body>
+<script>
+    let a1 = parseInt(prompt("Nhập số thứ nhất: "))
+    let a2 = parseInt(prompt("Nhập số thứ hai: "))
+    let a3 = parseInt(prompt("Nhập số thứ ba: "))
+        if (a1 === a2 && a1 === a3) {
+            alert("3 số trên bằng nhau")
+        } else if (a1 > a2 && a1 > a3) {
+                alert(a1 + " là số lớn nhất")
+            } else if (a2 > a3 && a2 > a1) {
+                alert(a2 + " là số lớn nhất")
+            } else {
+            alert(a3 + " là số lớn nhất")
+            }
+</script>
+</body>
+</html>
