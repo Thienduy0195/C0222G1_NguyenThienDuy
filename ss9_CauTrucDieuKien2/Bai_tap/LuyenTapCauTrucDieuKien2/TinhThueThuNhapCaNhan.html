@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+
+<script>
+    // CÁCH TÍNH THUẾ THU NHẬP CÁ NHÂN = SỐ TIỀN CHỊU THUẾ * TỶ LỆ CHỊU THUẾ THEO BẢNG DƯỚI
+    // SỐ TIỀN CHỊU THUẾ (TỔNG THU NHẬP CÁ NHÂN VƯỢT QUÁ 11 TRIỆU ĐỒNG)
+    // 1. Từ 0 đến 5 triệu đồng - 5%
+    // 2. Từ 5 triệu đồng đến 10 triệu đồng - 10%
+    // 3. Từ 10 triệu đồng đến 18 triệu đồng - 15%
+    // 4. Từ 18 triệu đồng đến 32 triệu đồng - 20%
+    // 5. Từ 32 triệu đồng đến 52 triệu đồng - 25%
+    // 6. Từ 52 triệu đồng đến 80 triệu đồng - 30%
+    // 7. Trên 80 triệu đồng - 35%
+    let money = parseInt(prompt("Nhập tổng thu nhập trong tháng này: "))
+    let money1 = money - 11000000
+    let total1 = money1 * 5 / 100
+    let total2 = money1 * 10 / 100
+    let total3 = money1 * 15 / 100
+    let total4 = money1 * 20 / 100
+    let total5 = money1 * 25 / 100
+    let total6 = money1 * 30 / 100
+    let total7 = money1 * 5 / 100
+    if(money<11000000){
+        document.write("Tháng này bạn không chịu thuế TNCN")
+    } else if(money>11000000){
+        document.write("Thuế TNCN tháng này bằng: " + total1.toLocaleString())
+    } else if(money>16000000){
+        document.write("Thuế TNCN tháng này bằng: " + total2.toLocaleString())
+    } else if(money>21000000){
+        document.write("Thuế TNCN tháng này bằng: " + total3.toLocaleString())
+    } else if(money>29000000){
+        document.write("Thuế TNCN tháng này bằng: " + total4.toLocaleString())
+    } else if(money>43000000){
+        document.write("Thuế TNCN tháng này bằng: " + total5.toLocaleString())
+    } else if(money>63000000){
+        document.write("Thuế TNCN tháng này bằng: " + total6.toLocaleString())
+    } else if(money>91000000){
+        document.write("Thuế TNCN tháng này bằng: " + total7.toLocaleString())
+    }
+</script>
+</body>
+</html>
