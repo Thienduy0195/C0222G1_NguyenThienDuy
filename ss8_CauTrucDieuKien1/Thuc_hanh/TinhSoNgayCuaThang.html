@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Số Ngày Của Tháng</title>
+</head>
+<body>
+<div>
+    <input type="text" id="month" placeholder="nhập tháng vào đây">
+    <button onclick="check()">Tính số ngày</button>
+    <p id="ketqua"></p>
+</div>
+<script>
+
+    function check() {
+        let month = parseInt(document.getElementById("month").value)
+        switch (month) {
+            case 2:
+                document.getElementById("ketqua").innerHTML = "tháng " + month + " có 28 hoặc 29 ngày"
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                    document.getElementById("ketqua").innerHTML = "tháng " + month + " có 30 ngày"
+                // alert(month)
+                break;
+                default:
+                    document.getElementById("ketqua").innerHTML = "tháng " + month + " có 31 ngày"
+                // alert(month)
+    }
+    }
+</script>
+</body>
+</html>
