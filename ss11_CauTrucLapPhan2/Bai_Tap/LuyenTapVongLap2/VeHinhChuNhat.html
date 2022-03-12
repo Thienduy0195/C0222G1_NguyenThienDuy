@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4. Vẽ hình chữ nhật</title>
+</head>
+<body>
+<p style="color: orangered">Em thay dấu # thành khoảng trống thì nó lại không hiển thị như yêu cầu,
+    em chưa biết làm thế nào để nó không gộp lại</p>
+    <script>
+        for(a = 1; a <= 7; a++)    {
+            for(b = 1 ; b <= 20; b++){
+                if(a === 1 || b === 1 || a === 7 || b === 20){
+                    document.write("*");
+                } else{
+                    document.write("#")
+                }
+            }
+            document.write("</br>")
+        }
+    </script>
+</body>
+</html>
