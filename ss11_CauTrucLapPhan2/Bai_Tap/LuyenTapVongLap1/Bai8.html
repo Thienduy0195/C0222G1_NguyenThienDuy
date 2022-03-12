@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+</head>
+<body>
+    <button onclick="chơi()">Chơi</button>
+    <script>
+        function chơi(){
+            let fisrtnum = parseInt(prompt("Bạn muốn đoán số trong khoản từ: "));
+            let lastnum = parseInt(prompt("Đến: "));
+            //tự lập một công thức để tìm ra số mà người chơi tưởng là ngẫu nhiên
+            let n = Math.floor(Math.random()*(lastnum-fisrtnum))+fisrtnum;
+            // console.log(n)
+            let i =1;
+            input = parseInt(prompt("Nhập số bạn muốn đoán: "));
+            do {
+                if (input > n && input <= lastnum) {
+                    alert("Số bạn nhập quá lớn, vui lòng nhập lại!")
+                    input = parseInt(prompt("Nhập số bạn muốn đoán: "));
+                } else if (input < n && input >= fisrtnum) {
+                    alert("Số bạn nhập quá nhỏ, vui lòng nhập lại!")
+                    input = parseInt(prompt("Nhập số bạn muốn đoán: "));
+                } else if (input === n) {
+                    alert("Xin chúc mừng, bạn đã nhập đúng!")
+                    break;
+                } else {
+                    alert("Bạn vừa nhập số ngoài vùng đoán, vui lòng nhập lại")
+                    input = parseInt(prompt("Nhập số bạn muốn đoán: "));
+                }
+                i++
+            }while(i<3);
+            if(i===3){
+                alert("Bạn đã nhập đủ 3 lần, trò chơi kết thúc!")
+            }
+        }
+
+    </script>
+</body>
+</html>

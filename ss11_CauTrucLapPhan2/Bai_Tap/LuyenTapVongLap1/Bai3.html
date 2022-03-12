@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</title>
+</head>
+<body>
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+    <script>
+        let i = 1;
+        let num1 = 0;
+        let num2 = 1;
+        document.write(num1 + "</br>")
+        document.write(num2 + "</br>")
+        while(i<=18){
+            let num3 = num1 + num2;
+            document.write(num3 + "</br>")
+            num1 = num2
+            num2 = num3
+            i += 1
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+<!--Bài 2: Tính giai thừa của một số nguyên dương bất kỳ được nhập vào-->
+<script>
+    let num = parseInt(prompt("Nhập số cần tính giai thừa: "))
+    let volume =1
+    let i = 1
+    for(i=1; i<=num; i++){
+        volume = volume*i
+        if (i===num){
+            document.write("Giai thừa của " + num + " là bằng: " + volume)
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>

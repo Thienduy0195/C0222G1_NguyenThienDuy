@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let numbers = 20
+    let count = 0
+    let x = 2
+    while(count < numbers) {
+        let check = true;
+        if (x < 2){
+            check = false;
+        } else if (x === 2){
+            check = true;
+        } else if (x % 2 === 0){
+            check = false;
+        } else{
+            for(i = 3; i < x; i++){
+                if (x % i === 0){
+                    check = false;
+                    break;
+                }
+            }
+        }
+        if (check == true){
+            document.write(x + " là số nguyên tố" + "</br>");
+            count +=1
+        }
+        x+=1
+    }
+</script>
+</body>
+</html>
