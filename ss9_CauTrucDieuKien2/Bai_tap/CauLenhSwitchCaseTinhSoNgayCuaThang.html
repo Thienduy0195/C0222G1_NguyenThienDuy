@@ -25,8 +25,16 @@
                     document.getElementById("ketqua").innerHTML = "tháng " + month + " có 30 ngày"
                 // alert(month)
                 break;
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("ketqua").innerHTML = "tháng " + month + " có 31 ngày"
+                break
                 default:
-                    document.getElementById("ketqua").innerHTML = "tháng " + month + " có 31 ngày"
+                    document.getElementById("ketqua").innerHTML = "Không có tháng bạn vừa nhập"
                 // alert(month)
     }
     }
