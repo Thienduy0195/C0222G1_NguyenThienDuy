@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+    <p>Viết một chương trình JavaScript để tìm giá trị lớn nhất trong mảng [-3, 5, 1, 3, 2, 10]; cho trước.</p>
+    <p id="result" style="color: orangered"></p>
+    <script>
+        let Array = [-3, 5, 1, 3, 2, 10];
+        let max = Array[0];
+        let index = 0;
+        for(i=0; i<=Array.length; i++){
+            if (Array[i]>max){
+                max = Array[i];
+                index = i;
+            }
+        }
+        document.getElementById("result").innerHTML = "Giá trị lớn nhất của dãy là " + max + " ở vị trí " + index + " của dãy"
+    </script>
+</body>
+</html>
