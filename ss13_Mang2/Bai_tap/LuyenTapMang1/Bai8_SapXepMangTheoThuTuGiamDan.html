@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<!--Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. -->
+<!--Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+<p style="color: blue">Cho mảng arrays = [1, 3, 6, 14, 17, 21, 19, 5, 25, 9];</p>
+    <script>
+        let arrays = [1, 3, 6, 14, 17, 21, 19, 5, 25, 9];
+        let newarrays = arrays.sort(function (a,b) {
+            return b-a;
+        });
+        document.write("Mảng mới sau khi thay đổi là: newarrays = " + newarrays)
+    </script>
+</body>
+</html>
