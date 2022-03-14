@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+<body>
+<p style="color: orangered">Viết một chương trình JavaScript để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng [-3, 5, 1, 3, 2, 10]; hay không.
+    Nếu có in ra vị trí của phần tử đó.</p>
+</body>
+<script>
+    let value = prompt("Nhập số cần kiểm tra có thuộc mảng hay không: ");
+    let Array = [-3, 5, 1, 3, 2, 10];
+    for(let i = 0; i<= Array.length; i++){
+        if(value==Array[i]){
+            document.write("Số bạn vừa nhập CÓ trong Array")
+        };
+    }
+</script>
+</html>

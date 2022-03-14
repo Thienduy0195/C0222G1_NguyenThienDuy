@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo Ngược các phần tủ trong mảng</title>
+</head>
+<body>
+<h3>Thực hành đảo ngược các phần tử trong mảng string = [-3,5,1,3,2,10];</h3>
+    <script>
+        let string = [-3,5,1,3,2,10];
+        let first = 0;
+        let last = string.length-1
+        for(;first < last;first++){
+            let b = string[first];
+            string[first] = string[last];
+            string[last] = b;
+            last--;
+        }
+        document.write(string)
+    </script>
+</body>
+</html>
