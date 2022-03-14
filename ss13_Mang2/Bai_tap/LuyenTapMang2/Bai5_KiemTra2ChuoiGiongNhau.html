@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+<p style="color: blue"> Cho chuỗi 2 ban đầu là string1 = "Nguyen Thien Duy From Codegym"; string2 = "Nguyen Thien Duy From gymcode"
+    <br> Kiểm tra xem 2 chuỗi này có giống nhau không
+</p>
+    <script>
+        let string1 = "Nguyen Thien Duy From Codegym";
+        let string2 = "Nguyen Thien Duy From gymcode";
+        if (string1.length !== string2.length){
+            document.write("2 chuỗi trên không giống nhau");
+        } else {
+            let check = false;
+            for (let i=0; i < string1.length - 1; i ++){
+                if(string1[i] !== string2[i]){
+                    check = false
+                } else {
+                    check = true}
+            }
+            if (check === true){
+                document.write("2 chuỗi trên giống nhau")
+            } else {document.write("2 chuỗi trên không giống nhau")}
+        }
+
+    </script>
+</body>
+</html>

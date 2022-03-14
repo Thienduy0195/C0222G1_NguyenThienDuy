@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<!--Bài 4: Viết một chương trình để đếm số từ trong một chuỗi-->
+<p style="color: blue"> Cho chuỗi ban đầu là string = "Nguyen Thien Duy From Codegym"; Độ dài chuỗi là 29</p>
+<script>
+    let string = "Nguyen Thien Duy From Codegym";
+    let length = 29;
+    let count = 1
+    for(let i=0; i < length; i++){
+        if(string[i] === " "){
+            count +=1;
+        }
+    }
+    document.write("Số từ trong chuỗi là: " + count)
+
+</script>
+</body>
+</html>
