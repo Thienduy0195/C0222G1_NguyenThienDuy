@@ -9,6 +9,8 @@
     Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
     Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
 </p>
+<p id="write" style="color: blue"></p>
+<p id="show" style="color: blue"></p>
     <script>
 
         const num = window.prompt();
@@ -26,7 +28,8 @@
                 result.push(str[x]);
             }
         }
-        console.log(result.join(''));
+        document.getElementById("write").innerHTML = "Số bạn vừa nhập là: " + num
+        document.getElementById("show").innerHTML = "Đã được chuyển thành: " + result.join('');
     </script>
 </body>
 </html>

@@ -6,25 +6,22 @@
 </head>
 <body>
 <input id="input" type="text">
-<button onclick="change">Translate</button>
-<!--<input id="output" type="text">-->
-<p id="output">change</p>
+<button onclick="change()">Translate</button>
+<p id="output" style="color: orangered"></p>
     <script>
-        // let Eng = ["name", "age", "address", "gender"]
-        // let Viet = ["tên", "tuổi", "địa chỉ", "giới tính"]
-        function change(){
+        let eng = ["name", "age", "address", "gender"]
+        let viet = ["tên", "tuổi", "địa chỉ", "giới tính"]
+        function change() {
             let a = document.getElementById("input").value
-            document.getElementById("output").innerHTML = a
-        }
-        // let input = document.getElementById("input")
-        // document.getElementById("output").innerHTML = input
-        // for(i=0; i<Eng.length; i++) {
-        //
-        //
-        //
-        //     }
-        // }
-        // function
+            let atolowercase = a.toLowerCase()
+            let i = eng.indexOf(atolowercase)
+                if(i !== -1){
+                    document.getElementById("output").innerHTML = viet[i]
+                } else {
+                    document.getElementById("output").innerHTML = "Không tìm thấy từ vựng này"
+                }
+            }
+
     </script>
 </body>
 </html>
