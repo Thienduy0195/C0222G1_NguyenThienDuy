@@ -12,6 +12,7 @@
 <!--Mỗi lần giá trị được nhập vào thì bàn cờ thay đổi giá trị theo người chơi.-->
 <!--Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp giống nhau.-->
 <h3>Caro Game Simple</h3>
+<h2 STYLE="color: orangered">BÀI NÀY EM CHƯA LÀM XONG</h2>
 <p id="carogame" />
 <script>
     let b = document.getElementById("carogame");
@@ -19,7 +20,7 @@
     let board = [];
     let data = "";
     for (let i = 0; i < 5; i++) {
-        board[i] = new Array(0, 0, 0, 0, 0);
+        board[i] = new Array(".", ".", ".", ".", ".");
     }
 
     for (let i = 0; i < 5; i++) {
@@ -33,18 +34,43 @@
     b.innerHTML = data;
 
     function changeValue() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
-        data = "";
-        board[positionX][positionY] = "x";
-        for (let i = 0; i < 5; i++) {
-            data += "<br/>";
-            for (let j = 0; j < 5; j++) {
-                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            let positionX1 = prompt("X1: ");
+            let positionY1 = prompt("Y1: ");
+            let positionX2 = prompt("X2: ");
+            let positionY2 = prompt("Y2: ");
+            data = "";
+            board[positionX1][positionY1] = "x";
+            board[positionX2][positionY2] = "o";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
             }
-        }
         data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
         b.innerHTML = "<hr/>" + data;
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if(i===j && board[i][j] === "x"){
+
+                    }
+                }
+            }
+        // let positionX1 = prompt("X1: ");
+        // let positionY1 = prompt("Y1: ");
+        // let positionX2 = prompt("X2: ");
+        // let positionY2 = prompt("Y2: ");
+        // data = "";
+        // board[positionX1][positionY1] = "x";
+        // board[positionX2][positionY2] = "0";
+        // for (let i = 0; i < 5; i++) {
+        //     data += "<br/>";
+        //     for (let j = 0; j < 5; j++) {
+        //         data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        //     }
+        // }
+        // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        // b.innerHTML = "<hr/>" + data;
     }
     </script>
 </body>

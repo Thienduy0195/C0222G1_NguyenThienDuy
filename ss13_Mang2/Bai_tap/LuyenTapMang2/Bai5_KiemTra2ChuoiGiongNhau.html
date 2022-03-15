@@ -12,19 +12,20 @@
     <script>
         let string1 = "Nguyen Thien Duy From Codegym";
         let string2 = "Nguyen Thien Duy From gymcode";
+        //hoặc dùng prompt để nhập 2 chuỗi vào
         if (string1.length !== string2.length){
             document.write("2 chuỗi trên không giống nhau");
         } else {
             let check = false;
-            for (let i=0; i < string1.length - 1; i ++){
+            for (let i=0; i < string1.length; i ++){
                 if(string1[i] !== string2[i]){
                     check = false
                 } else {
                     check = true}
             }
             if (check === true){
-                document.write("2 chuỗi trên giống nhau")
-            } else {document.write("2 chuỗi trên không giống nhau")}
+                document.write("Kết quả: 2 chuỗi trên giống nhau")
+            } else {document.write("Kết quả: 2 chuỗi trên không giống nhau")}
         }
 
     </script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Faking Textarea on Typing</title>
+</head>
+<body style="text-align: center">
+    <h3 style="color:blue;">Typing Anything Slowly</h3>
+    <textarea name="typing" id="faking" cols="30" rows="10" onkeydown="fakingtext()"></textarea>
+    <script>
+        let arrays = ["T", "Ô", "I", " ", "L", "À", " ", "M", "Ộ", "T", " ", "Đ", "Ứ", "A", " ", "N", "G", "Ố", "C", "!"]
+        let string = ""
+        function fakingtext(){
+            let b = document.getElementById("faking").value;
+            let j = b.length;
+            if(j>0){
+                for (let i=0; i < j; i++){
+                    string = string + arrays[i];
+                }
+            }
+            document.getElementById("faking").innerHTM = string;
+                }
+    </script>
+
+</body>
+</html>
