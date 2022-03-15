@@ -11,14 +11,15 @@
     let Numbers = []
     let numbers = 10
     let count = 0
-    let x = Math.floor(Math.random()*7)
+    let x = Math.floor(Math.random()*2)
+    // khởi tạo một mảng ngẫu nhiên
     while(count < numbers) {
             Numbers.push(x)
             count +=1
             x+=3
         }
     let dem = 0;
-    for(i=0; i<10; i++){
+    for(let i=0; i<10; i++){
         if(Numbers[i] >= 10){
             dem+=1
         }
