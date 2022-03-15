@@ -20,10 +20,11 @@
             for (let i=0; i < string1.length; i ++){
                 if(string1[i] !== string2[i]){
                     check = false
+                    break;
                 } else {
                     check = true}
             }
-            if (check === true){
+            if (check){
                 document.write("Kết quả: 2 chuỗi trên giống nhau")
             } else {document.write("Kết quả: 2 chuỗi trên không giống nhau")}
         }
