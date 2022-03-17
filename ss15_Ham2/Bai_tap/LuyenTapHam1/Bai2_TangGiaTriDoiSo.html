@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bài 2 Luyện tập 1</title>
 </head>
 <body>
-$END$
+<p style="color: crimson">Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần < body > của trang web và hiển thị kết quả lên màn hình.</p>
+<input type="number" id="inputNumber" placeholder="Nhập đối số vào đây">
+<button onclick="show()">Click vào đây!</button>
+<p id="result"></p>
+<script>
+    function show(){
+        let n = parseInt(document.getElementById("inputNumber").value);
+        n+=1
+        document.getElementById("result").innerHTML = "Result: " + n;
+    }
+
+</script>
 </body>
 </html>

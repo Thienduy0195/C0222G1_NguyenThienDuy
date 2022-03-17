@@ -6,9 +6,23 @@
 </head>
 <body>
 <script>
-    function isPrime(number){
 
-    }
+    function isPrime(number){
+            let count = 0;
+            for (let i = 1; i <= number; i++) {
+                if(number % i === 0) {
+                    count += 1
+                }
+            }
+            if(count === 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let n = parseInt(prompt("Nhập số vào đây: "));
+        isPrime(n) ? alert(n + " là số nguyên tố") : alert(n + " không phải là số nguyên tố")
+
 </script>
 </body>
 </html>

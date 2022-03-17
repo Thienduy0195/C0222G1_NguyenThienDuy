@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bài 3 - Luyện tập 1</title>
 </head>
 <body>
-$END$
+<p style="color: crimson">Bài 3: Tạo hàm nhận vào hai tham số. <br>
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. <br>
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</p>
+<p id="writeResult"></p>
+    <script>
+
+        function showresult(a,b){
+            if (a > b){
+                alert(a + " lớn hơn " + b);
+            } else {
+                let total = a +b;
+                document.getElementById("writeResult").innerHTML = total;
+            }
+        }
+        let x = parseInt(prompt("Nhập số thứ nhất: "));
+        let y = parseInt(prompt("Nhập số thứ hai: "));
+        showresult(x,y);
+
+    </script>
 </body>
 </html>
