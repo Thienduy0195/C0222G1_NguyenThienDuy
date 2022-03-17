@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9 Luyện tập 2</title>
+</head>
+<body>
+<!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+<!--["a", "b", "c", "d", "d", "g", "h"]-->
+<script>
+    function check(array,n){
+        let count = 0;
+        for (let i=0; i < array.length; i++){
+            if(array[i] === n){
+                count+=1
+            }
+        }
+        if(count>0){
+            return "có " + count + " ký tự " + n + " trong mảng";
+        } else {
+            return -1
+        }
+    }
+    let array1 = [];
+    let lengthofarray1 = parseInt(prompt("Nhập độ dài của mảng: "))
+    for(let j = 1; j<=lengthofarray1; j++){
+        let x = prompt("Nhập phần tử thứ " + j);
+        array1.push(x);
+    }
+    let a = prompt("Nhập ký tự cần tìm trong mảng: ");
+    document.write(check(array1,a));
+</script>
+</body>
+</html>

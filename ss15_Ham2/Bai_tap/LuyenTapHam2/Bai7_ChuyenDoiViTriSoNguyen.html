@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7 Luyện tập 2</title>
+</head>
+<body>
+<p style="color: blue">Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</p>
+<script>
+
+    function trans(a,b){
+        let c = a;
+        a = b;
+        b = c;
+        return a + "," + b;
+    }
+    let m = parseInt(prompt("Nhập số thứ nhất: "));
+    let n = parseInt(prompt("Nhập số thứ hai: "));
+    document.write("Kết quả sau khi đảo ngược: " + trans(m,n));
+</script>
+</body>
+</html>

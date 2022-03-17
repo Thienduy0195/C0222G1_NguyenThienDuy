@@ -12,12 +12,12 @@
 
 
     function footToMeter(){
-        let foot = parseInt(document.getElementById("input").value);
+        let foot = parseFloat(document.getElementById("input").value);
         let result1 = 0.305 * foot;
         return document.getElementById("result").innerHTML = result1;
     }
     function meterToFoot() {
-        let meter = parseInt(document.getElementById("input").value);
+        let meter = parseFloat(document.getElementById("input").value);
         let result2 = 3.279 * meter
         return document.getElementById("result").innerHTML = result2;
     }

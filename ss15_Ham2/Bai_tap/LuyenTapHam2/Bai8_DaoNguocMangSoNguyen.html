@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8 Luyện tập 2</title>
+</head>
+<body>
+<p style="color: blue">Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</p>
+<script>
+    let m = parseInt(prompt("Nhập số thứ nhất: "));
+    let n = parseInt(prompt("Nhập số thứ hai: "));
+    let p = parseInt(prompt("Nhập số thứ ba: "));
+    function reverse(a,b,c){
+        let array = [];
+        array.push(a);
+        array.push(b);
+        array.push(c);
+        return array.reverse();
+    }
+    document.write(reverse(m,n,p));
+
+</script>
+</body>
+</html>

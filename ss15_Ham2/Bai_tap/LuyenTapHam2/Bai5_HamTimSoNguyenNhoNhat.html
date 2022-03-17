@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5 Luyện tập 2</title>
+</head>
+<body>
+<p style="color: blue">Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</p>
+<p><input type="text" id="input" placeholder="Nhập số nguyên"><button onclick="nhapvao()">NHẬP</button>
+    <button onclick="check()">KIỂM TRA</button></p>
+<p style="color: crimson" id="output1"></p>
+<p style="color: crimson" id="output2"></p>
+<script>
+    function nhapvao() {
+        let n = document.getElementById("input").value;
+        let array = [];
+        for (let i=1; i<=3; i++){
+            if(!isNaN(n)){
+                array.push(n);
+            }
+        }
+        document.getElementById("output1").innerHTML = "Mảng được cho là: " + array;
+    }
+    function check() {
+        let array1 = document.getElementById("output1").value;
+            let min = array1[0];
+            for (let j=1; i<3; j++){
+                if (min > array1[i]){
+                    min = array1[i];
+                }
+        }
+            document.getElementById("output2").innerHTML = "Giá trị nhỏ nhất trong mảng là: " + min;
+    }
+</script>
+</body>
+</html>

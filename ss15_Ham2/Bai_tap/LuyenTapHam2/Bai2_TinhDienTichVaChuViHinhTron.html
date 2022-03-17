@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 Luyện tập 2</title>
+</head>
+<body>
+<p style="color: blue">Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</p>
+<p><input type="text" id="input" placeholder="Nhập bán kính"><button onclick="calculating()">TÍNH</button></p>
+<p style="color: crimson" id="output1"></p>
+<p style="color: crimson" id="output2"></p>
+<script>
+    function calculating() {
+        let r = document.getElementById("input").value;
+        const pi = 3.14159;
+        let s = r * r * pi;
+        let h = 2 * r * pi;
+        document.getElementById("output1").innerHTML = "Diện tích hình tròn là: " + s;
+        document.getElementById("output2").innerHTML = "Chu vi hình tròn là: " + h;
+    }
+</script>
+</body>
+</html>

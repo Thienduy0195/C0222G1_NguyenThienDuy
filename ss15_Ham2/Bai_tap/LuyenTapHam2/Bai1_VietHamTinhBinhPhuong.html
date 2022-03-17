@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 Luyện tập 2</title>
+</head>
+<body>
+<p style="color: blue">Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+<p><input type="text" id="input" placeholder="Nhập số vào đây"><button onclick="calculating()">TÍNH BÌNH PHƯƠNG</button></p>
+<p style="color: crimson" id="output"></p>
+    <script>
+    function calculating() {
+        let n = document.getElementById("input").value;
+        if(isNaN(n)){
+            return document.getElementById("output").innerHTML = "Bạn cần nhập vào một số!";
+        } else {
+            let vol = n*n;
+            return document.getElementById("output").innerHTML = "Kết quả: " + vol;
+        }
+    }
+    </script>
+</body>
+</html>
