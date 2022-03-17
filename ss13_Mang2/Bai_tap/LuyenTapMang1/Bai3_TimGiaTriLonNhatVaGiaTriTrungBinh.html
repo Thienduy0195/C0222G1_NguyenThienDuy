@@ -9,16 +9,14 @@
 <!--Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
 <p style="color: crimson">Cho mảng là Arrays = [1, 3 ,6, 14, 17, 21, 19, 5, 25, 9]</p>
     <script>
-        let Arrays = [1, 3 ,6, 14, 17, 21, 19, 5, 25, 9]
-        let max = Arrays[0]
+        let Arrays = [1, 3 ,6, 14, 17, 21, 19, 5, 25, 9];
+        let max = Arrays[0];
+        let sum = Arrays[0];
         for(let i=1; i< Arrays.length; i++){
+            sum += Arrays[i]
             if(Arrays[i] > max){
                 max = Arrays[i]
             }
-        }
-        let sum = 0
-        for(let a =0; a < Arrays.length; a++){
-            sum += Arrays[a]
         }
         let agv = sum/Arrays.length
         document.write("Giá trị lớn nhất trong mảng là: " + max + "</br>")
