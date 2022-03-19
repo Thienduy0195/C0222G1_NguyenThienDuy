@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LỚP ĐIỆN THOẠI</title>
+</head>
+<style>
+</style>
+<body>
+    <div>
+        <table border="1" style="background-color: orange">
+            <tr>
+                <th>NOKIA PHONE</th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Nokia.checkPhone()">CHECK THE PHONE</button>
+                    <br>
+                    <button onclick="Nokia.chargeYourPhone()">CHARGE THE PHONE</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Nokia.turnOn()">TURN ON</button>
+                    <button onclick="Nokia.turnOff()">TURN OFF</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Nokia.writeMessage()">WRITE MESSAGE</button><br>
+                    <button onclick="Nokia.sendMessage()">SEND MESSAGE </button><br>
+                    <button onclick="Nokia.receiveMessage()">RECEIVE MESSAGE</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Nokia.showReceivedMessage()">SHOW RECEIVED MESSAGE</button><br>
+                    <button onclick="Nokia.showSentMessage()">SHOW SENT MESSAGE</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table border="1" style="background-color: green">
+            <tr>
+                <th>IPHONE</th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Iphone.checkPhone()">CHECK THE PHONE</button>
+                    <br>
+                    <button onclick="Iphone.chargeYourPhone()">CHARGE THE PHONE</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Iphone.turnOn()">TURN ON</button>
+                    <button onclick="Iphone.turnOff()">TURN OFF</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Iphone.writeMessage()">WRITE MESSAGE</button><br>
+                    <button onclick="Iphone.sendMessage()">SEND MESSAGE </button><br>
+                    <button onclick="Iphone.receivedMessage()">RECEIVE MESSAGE</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="Iphone.showReceivedMessage()">SHOW RECEIVED MESSAGE</button><br>
+                    <button onclick="Iphone.showSentMessage()">SHOW SENT MESSAGE</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        class MyMobile{
+            constructor(battery, memory1, memory2, memory3) {
+                this.battery = battery;
+                this.memory1 = memory1;
+                this.memory2 = memory2;
+                this.memory3 = memory3;
+            }
+            Active() {
+                if(this.battery > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            checkPhone() {
+                if (this.Active()) {
+                    return alert("Điện thoại đang hoạt động " + "(" + this.battery + "%)");
+                } else {
+                    alert("Điện thoại đang tắt (pin = 0%), hãy sạc pin!!" );
+                }
+            }
+            turnOn (){
+                if (this.Active()) {
+                    alert("Bạn vừa bật điện thoại");
+                    if(this.battery>0){
+                        --this.battery
+                    }
+                }
+                }
+            turnOff () {
+                if (this.Active()) {
+                    alert("Bạn vừa tắt điện thoại");
+                }
+                if (this.battery > 0) {
+                    --this.battery
+                }
+            }
+            chargeYourPhone (){
+                alert("Đã sạc được " + ++this.battery + "%");
+            }
+            writeMessage (mess){
+                if(this.Active()){
+                    if (this.battery>0){
+                        --this.battery
+                    }
+                    return mess = prompt("Hãy soạn tin nhắn").value;
+                }
+            }
+            receiveMessage (){
+                if(this.Active()){
+                    alert("Bạn vừa nhận 1 tin nhắn");
+                    if (this.battery>0){
+                        --this.battery
+                    }
+                }
+            }
+            sendMessage (){
+                if(this.Active()){
+                    alert("Bạn vừa gửi 1 tin nhắn");
+                }
+                if (this.battery>0){
+                    --this.battery
+                }
+            }
+            showSentMessage(){
+                alert("Em chưa làm được tính năng show tin nhắn đã gửi ra");
+                if (this.battery>0){
+                    --this.battery
+                }
+            }
+            showReceivedMessage(){
+                alert("Em chưa làm được tính năng show tin nhắn đã nhận ra");
+                if (this.battery>0){
+                    --this.battery
+                }
+            }
+            afterUsing(){
+                alert("Pin điện thoại còn " + --this.battery + "%");
+                if(this.battery===0){
+                    alert("Điện thoại đã hết pin bạn không thể sử dụng");
+                }
+            }
+        }
+        let Nokia = new MyMobile(2, 200, 200, 200);
+        let Iphone = new MyMobile(39, 200, 200, 200);
+
+    </script>
+</body>
+</html>

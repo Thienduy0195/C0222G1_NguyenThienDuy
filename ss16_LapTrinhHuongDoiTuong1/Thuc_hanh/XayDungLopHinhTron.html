@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành xây dựng lớp hình tròn</title>
+</head>
+<body>
+    <script>
+        class Circle{
+            constructor(radius, color) {
+                this.radius = radius;
+                this.color = color;
+                }
+                getRadius(){
+                return this.radius;
+                }
+                getArea(){
+                return this.radius * this.radius * Math.PI;
+                }
+                getColor(){
+                return this.color;
+                }
+            }
+        let Circle1 = new Circle(5, "red")
+        let radius = Circle1.getRadius();
+        let area = Circle1.getArea();
+        let color = Circle1.getColor();
+        document.write("Radius: " + radius + "/" + "Area: " + area + "/" + "Color: " + color)
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành xây dựng lớp Date</title>
+</head>
+<body>
+    <script>
+        class MyDate {
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+                this.setDay = function(day) {
+                    this.day  = day;
+                }
+                this.setMonth = function(month) {
+                    this.month  = month;
+                }
+                this.setYear = function(year) {
+                    this.year  = year;
+                }
+                this.setDate = function(day, month, year){
+                    this.day = day;
+                    this.month = month;
+                    this.year = year;
+                    }
+                this.toString = function(){
+                    return this.day+ "/" + this.month + "/" + this.year
+                }
+            }
+
+            getDay() {
+                return this.day;
+            }
+
+            getMonth() {
+                return this.month;
+            }
+
+            getYear() {
+                return this.year;
+            }
+
+
+        }
+
+        let Date = new MyDate(15,12,2002);
+        let day = Date.getDay()
+        let month =Date.getMonth()
+        let year = Date.getYear()
+        document.write("Ngày " + day + " tháng " + month + " năm " + year + "</br>");
+
+        Date.setDate(25,11,2019);
+        let day1 = Date.getDay()
+        let month1 =Date.getMonth()
+        let year1 = Date.getYear()
+        document.write("Ngày " + day1 + " tháng " + month1 + " năm " + year1 + "</br>");
+        document.write(Date);
+    </script>
+</body>
+</html>

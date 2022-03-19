@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng lớp mô tả Nhiệt độ</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(c){
+                this.c = c;
+            }
+            transtoF(){
+                return this.c * 9/5 + 32
+            }
+            transtoKenvin(){
+                if(this.c > -273){
+                    return this.c + 273
+                } else {
+                    return "Bạn nhập sai giá trị độ C"
+                }
+            }
+        }
+        let Temperature1 = new Temperature(25);
+        let F = Temperature1.transtoF();
+        let K = Temperature1.transtoKenvin();
+        document.write("25 độ C = " + F + " độ F = " + K + " độ K");
+    </script>
+</body>
+</html>
