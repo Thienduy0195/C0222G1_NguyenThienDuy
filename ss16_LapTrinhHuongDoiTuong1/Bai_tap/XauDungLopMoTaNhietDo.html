@@ -10,10 +10,10 @@
             constructor(c){
                 this.c = c;
             }
-            transtoF(){
+            cToF(){
                 return this.c * 9/5 + 32
             }
-            transtoKenvin(){
+            cToK(){
                 if(this.c > -273){
                     return this.c + 273
                 } else {
@@ -21,10 +21,10 @@
                 }
             }
         }
-        let Temperature1 = new Temperature(25);
-        let F = Temperature1.transtoF();
-        let K = Temperature1.transtoKenvin();
-        document.write("25 độ C = " + F + " độ F = " + K + " độ K");
+        let temperature1 = new Temperature(25);
+        let f = temperature1.cToF();
+        let k = temperature1.cToK();
+        document.write("25 độ C = " + f + " độ F = " + k + " độ K");
     </script>
 </body>
 </html>
