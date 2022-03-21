@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập công tắc và bóng đèn</title>
+</head>
+<body>
+    <script>
+        class ElectricLamp{
+            constructor(name,status) {
+                this.name = name;
+                this.status = status;
+            }
+            turnOff(){
+                this.status = false;
+                console.log("Đã ngắt nguồn điện");
+                }
+            turnOn(){
+                this.status = true;
+                console.log("Đã kết nối với nguồn điện");
+            }
+        }
+        class Button{
+            constructor(status, lamp) {
+                this.status = status;
+                this.lamp = lamp;
+            }
+            connectToLamp(){
+                if (this.lamp.status === true){
+                    console.log("Đã kết nối công tắc với bóng đèn");
+                } else {
+                   console.log("Bóng đèn chưa được kết nối nguồn điện");
+                }
+            }
+            switchOff(){
+                this.status = false;
+                this.lamp.status = false;
+                console.log("Đã tắt " + this.lamp.name);
+            }
+            switchOn(){
+                this.status = true;
+                this.lamp.status = true;
+                console.log("Đã bật " + this.lamp.name);
+            }
+        }
+        let rangdong = new ElectricLamp("RangDong", false);
+        let button = new Button(false, rangdong);
+        rangdong.turnOn();
+        button.connectToLamp();
+        for(let i=1;i<=10;i++){
+                button.switchOn();
+                button.switchOff();
+                //bật tắt 10 lần
+        }
+        rangdong.turnOff();
+    </script>
+</body>
+</html>

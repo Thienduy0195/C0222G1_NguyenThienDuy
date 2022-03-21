@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập Remote Tivi</title>
+</head>
+<body>
+    <script>
+        class Remote{
+            constructor(name) {
+                this.name = name;
+            }
+            turnOnTiVi(tivi){
+                tivi.status = "on";
+                console.log("Đã bật tivi " + tivi.name);
+            }
+            turnOff(tivi){
+                tivi.status = "off";
+                console.log("Đã tắt tivi " + tivi.name);
+            }
+            changeChannel(channel, tivi){
+                if(tivi.status === "on"){
+                    tivi.channel = channel;
+                    console.log("đã chuyển đến kênh " + tivi.channel);
+                }else{
+                    console.log("Tivi " + tivi.name + " đã tắt, không thể chuyển kênh");
+                }
+            }
+            changeVolume(number, tivi){
+                if(tivi.status === "on"){
+                    tivi.volume += number;
+                    console.log("Đã tăng âm lượng lên " + tivi.volume);
+                }else{
+                    console.log("Tivi " + tivi.name + " đã tắt, không thể thay đổi âm lượng");
+                }
+
+            }
+        }
+        class Television{
+            constructor(name, channel, volume, status) {
+                this.name = name;
+                this.channel = channel;
+                this.volume = volume;
+                this.status = status;
+            }
+            setChannel(channel){
+                this.channel = channel;
+                console.log(this.name + " đang ở kênh " + this.channel);
+            }
+            setVolume(volume){
+                this.volume = volume;
+                console.log(this.name + " đang ở mức âm lượng " + this.volume);
+            }
+        }
+        let samsung = new Television("Samsung", "","", "off");
+        //tivi đang tắt, chưa có kênh, chưa có âm lượng
+        let remote = new Remote("SamSungRemote");
+        samsung.setChannel("VTV3");
+        //cài đặt kênh cho tivi
+        samsung.setVolume(52);
+        //cài đặt âm lượng cho tivi
+        remote.turnOnTiVi(samsung);
+        //bật ti vi lên vì tivi đang tắt
+        remote.changeChannel(7, samsung);
+        //chuyển sang kênh 7
+        remote.changeChannel(3, samsung);
+        //chuyển sang kênh 3
+        remote.changeVolume(2, samsung);
+        //tăng âm lượng lên 2
+        remote.turnOff(samsung);
+        //tắt tivi
+        remote.changeChannel(3, samsung);
+        //chuyển kênh không được vì tivi đã tắt
+        remote.changeVolume(2, samsung);
+        //tăng âm lượng không được vì tivi đã tắt
+    </script>
+</body>
+</html>

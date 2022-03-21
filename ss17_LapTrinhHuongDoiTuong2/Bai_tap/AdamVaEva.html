@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu chuyện của Adam và Eva</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(weight) {
+                this.weight = weight;
+            }
+            decrease(){
+            }
+            isEmpty(){
+                if(this.weight > 0){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getWeight(){
+                return this.weight;
+            }
+        }
+        class Human{
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale(){
+                if(this.gender === "male"){
+                    return true;
+                } else{
+                    return false;
+                }
+            }
+            setGender(gender){
+                this.gender = gender;
+                return this.gender;
+            }
+            say(string){
+                this.string = string;
+                console.log(this.name + " said: " + this.string);
+            }
+            eat(Apple){
+                if(Apple.weight >0){
+                    ++this.weight;
+                    --Apple.weight;
+                }
+                console.log(this.name + " eat apple");
+                console.log("weight of " + this.name + ": " + this.weight + " " +"weight of apple:" + apple.weight);
+            }
+            checkApple(Apple){
+                console.log(this.name + " checked the weight of the apple: " + Apple.weight);
+        }
+        getName(human){
+            console.log(this.name + " know " + human.name);
+        }
+        setName(name){
+                this.name = name;
+        }
+        getWeight(){
+                return this.weight;
+        }
+        setWeight(weight){
+                this.weight = weight;
+                return this.weight;
+        }
+        }
+        let aDam = new Human("Adam", "male", 80);
+        let eVa = new Human ("Eva", "female", 60);
+        let apple = new Apple(10);
+        aDam.eat(apple);
+        aDam.say("Hello, i'm Thien Duy");
+        aDam.checkApple(apple);
+        eVa.getName(aDam);
+        aDam.setWeight(90);
+
+
+
+
+    </script>
+</body>
+</html>
