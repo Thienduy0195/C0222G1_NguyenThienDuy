@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 4 - string - Bài 2</title>
+</head>
+<body>
+<script>
+    function FindElement(string1, string2){
+        let Array1 = string1.split("");
+        let Array2 = string2.split("");
+        let Array = [];
+        let SmallArray = [];
+        for(let i =0; i < Array1.length;){
+            if(Array1.indexOf(Array2[i]) !==-1){
+                if(SmallArray.indexOf(Array2[i])===-1){
+                    SmallArray.push(Array2[i]);
+                }
+                Array.push(Array2[i]);
+                Array1.splice(Array1.indexOf(Array2[i]),1);
+                Array2.splice(i,1);
+                i--
+            } else{
+                i++;
+            }
+        }
+        document.write("Xâu 1 và xâu 2 có " + Array.length + " ký tự chung." + "</br>") ;
+        for(let i = 0; i<SmallArray.length;i++){
+            let count =0;
+            for(let j = 0; j<Array.length;j++){
+                if(SmallArray[i]===Array[j]){
+                    count++
+                }
+            }
+            document.write("Có " + count + " ký tự " + SmallArray[i] + "</br>");
+        }
+    }
+    let stringA = prompt("Nhập xâu 1: ")
+    let stringB = prompt("Nhập xâu 2: ")
+    FindElement(stringA,stringB);
+    // document.write(result);
+</script>
+</body>
+</html>

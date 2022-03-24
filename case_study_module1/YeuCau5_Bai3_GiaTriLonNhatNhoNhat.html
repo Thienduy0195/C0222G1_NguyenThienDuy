@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu Cầu 5 - Bài 3</title>
+</head>
+<body>
+<script>
+    function MaxAndMinInArray(m,n){
+        let array = [];
+        for (let i = 0; i < m; i++) {
+            let arrayx = [];
+            for (let j = 0; j < n; j++) {
+                let input = parseInt(prompt("Nhập phần tử vào: "));
+                arrayx.push(input);
+            }
+            array.push(arrayx);
+        }
+        let max = array[0][0];
+        let min = array[0][0];
+        for(let i=0; i< array.length; i++) {
+            for (let j = 1; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        document.write("Mảng vừa tạo: " + array + "<br>");
+        document.write("Max của mảng: " + max + "<br>" + "Min của mảng: " + min);
+    }
+
+    let a = parseInt(prompt("Nhập vào m: "));
+    let b = parseInt(prompt("Nhập vào n: "));
+    MaxAndMinInArray(a,b);
+</script>
+</body>
+</html>

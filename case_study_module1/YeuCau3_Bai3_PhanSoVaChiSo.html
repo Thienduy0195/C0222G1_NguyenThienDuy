@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 3 - bài 3</title>
+</head>
+<body>
+<script>
+    let Array1 = [5, 2, 5,8,10];
+    let Array2 = [6, 3, 4,2,3];
+    let maxFraction = Array1[0] / Array2[0];
+    let n = 0;
+    for(let i=0;i<Array1.length;i++){
+        if (Array1[i] / Array2[i] > maxFraction){
+            maxFraction = Array1[i] / Array2[i];
+            n = i
+        }
+    }
+    document.write(Array1[n] + "/" + Array2[n] + " là phân số lớn nhất, có chỉ số là: " + n);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - Yêu cầu 1</title>
+</head>
+<body>
+<script>
+    let stringA = prompt("Nhập xâu vào đây: ")
+    function ReturnString(string1){
+        let maxLength = 0;
+        let n = 0;
+        let arr = [];
+        let string = string1.toLowerCase().split(" ")
+        for(let i =0; i<string.length;){
+            if (string[i]===""){
+                string.splice(i,1);
+                --i
+            }else {i++}
+        }
+        for(let i=0; i<string.length;i++){
+            if(string[i].length> maxLength){
+                maxLength = string[i].length;
+                n = i;
+            }
+            for (let j=0;j<string[i].length;j++){
+                if(j===0){
+                    arr.push(string[i][j].toUpperCase())
+                } else {arr.push(string[i][j])}
+            }
+            arr.push(" ")
+        }
+        document.write("Xâu vừa nhập là: " + string1 + "<br>")
+        document.write("Xâu mới là: " + arr.join("").trim() + "<br>");
+        document.write(string[n] + " là từ dài nhất trong xâu" + "<br>")
+    }
+    ReturnString(stringA);
+
+</script>
+</body>
+</html>

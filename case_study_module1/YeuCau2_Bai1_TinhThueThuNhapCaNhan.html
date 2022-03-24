@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 2 - bài 1 - tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<label for="salary">NHẬP MỨC LƯƠNG</label>
+<input type="text"id="salary">
+<button onclick="calculating()">TÍNH LƯƠNG SAU THUẾ</button>
+<p id="result" style="color: green"></p>
+<script>
+    function calculating() {
+        let salary = document.getElementById('salary').value;
+        if(salary<7000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập bằng: " + salary*5/100;
+        } else if(salary <=15000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập bằng: " + salary*10/100;
+        }else {
+            document.getElementById("result").innerHTML = "Thuế thu nhập bằng: " + salary*15/100;
+        }
+    }
+</script>
+</body>
+</html>

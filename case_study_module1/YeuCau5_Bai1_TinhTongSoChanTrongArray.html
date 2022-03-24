@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 5 - bài 1</title>
+</head>
+<body>
+<p>Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+    Với m, n là các số nhập từ bàn phím.</p>
+<script>
+
+
+
+    function total(m,n) {
+        let array = [];
+        let sum = 0;
+        for (let i = 0; i < m; i++) {
+            let arrayx = [];
+            for (let j = 0; j < n; j++) {
+                let input = parseInt(prompt("Nhập phần tử vào: "));
+                arrayx.push(input);
+                if (input % 2 === 0) {
+                    sum += input;
+                }
+            }
+            array.push(arrayx);
+        }
+        document.write("Mảng vừa nhập: " + array + "<br>");
+        document.write("Tổng các số chẵn trong mảng: " + sum);
+    }
+    let a = parseInt(prompt("Nhập vào m: "));
+    let b = parseInt(prompt("Nhập vào n: "));
+    total(a,b);
+</script>
+</body>
+</html>

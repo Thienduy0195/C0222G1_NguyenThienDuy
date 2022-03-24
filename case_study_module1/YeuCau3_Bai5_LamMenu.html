@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 3 - bài 5 - Làm Menu</title>
+</head>
+<body>
+    <script>
+        let Price = [20000,25000,18000,18000,10000,25000];
+        let DrinkArray = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+        let drink = 0;
+        while(drink!==-1){
+            drink = parseInt(prompt("Menu" + "\n" + "1. Cafe" + "\n" + "2. Cam vắt" + "\n" + "3. Nước ép cà rốt" + "\n" + "4. Nước ép cà chua" + "\n" + "5. Nước lọc" + "\n" + "6. Nước dừa" + "\n" + "7. Thoát menu" + "\n" + "NHẬP THỨC UỐNG BẠN MUỐN"));
+            if(drink>7||drink ===0){
+                alert("Thức uống bạn chọn không có trong Menu, vui lòng chọn lại!");
+                continue;
+            } else if (drink===7){
+                alert("Cảm ơn bạn đã đến quán!");
+                break;
+            } else {
+                let n = parseInt(prompt("Bạn vừa chọn " + DrinkArray[drink-1] + ", Hãy số lượng muốn mua: "));
+                let total = Price[drink-1]*n;
+                alert("Tổng tiền cần thanh toán là: " + total.toLocaleString());
+            }
+        }
+    </script>
+</body>
+</html>

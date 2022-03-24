@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 4 - string - Bài 2</title>
+</head>
+<body>
+<script>
+    let s = "cabjgjgjca"
+    let ArrayOfS =[];
+    for(let i=0;i< s.length;i++){
+        if(ArrayOfS.indexOf(s[i])===-1){
+            ArrayOfS.push(s[i]);
+        }
+    }
+    document.write("Có " + ArrayOfS.length + " ký tự khác nhau là: " + ArrayOfS);
+</script>
+</body>
+</html>
